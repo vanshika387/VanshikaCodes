@@ -56,7 +56,7 @@ def index():
             # More flexible query:
             {"classification": {"$in": [True, "True"]}},  # Only show real estate articles
             {'_id': 0}  # Exclude MongoDB _id field
-        ).sort('_id', -1).limit(100))  # Limit to 100 most recent
+        ).sort('_id', -1).limit(1000))  # Limit to 100 most recent
         
         # Format dates and ensure useful field exists
         for article in articles:
