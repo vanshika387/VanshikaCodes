@@ -1,0 +1,16 @@
+{
+  "News": "https://lokmat.news18.com/commonfeeds/v1/lok/rss/news.xml",
+  "Business": "https://lokmat.news18.com/commonfeeds/v1/lok/rss/business.xml",
+  "Real estate": "https://lokmat.news18.com/commonfeeds/v1/lok/rss/real-estate.xml",
+  "Money": "https://lokmat.news18.com/commonfeeds/v1/lok/rss/money.xml",
+  "Business News": "https://lokmat.news18.com/commonfeeds/v1/lok/rss/business/business-news.xml",
+  "Maharashtra": "https://lokmat.news18.com/commonfeeds/v1/lok/rss/maharashtra.xml",
+  "Mumbai": "https://lokmat.news18.com/commonfeeds/v1/lok/rss/mumbai.xml",
+  "Pune": "https://lokmat.news18.com/commonfeeds/v1/lok/rss/pune.xml",
+  "Nashik": "https://lokmat.news18.com/commonfeeds/v1/lok/rss/maharashtra/nashik.xml",
+  "Nagpur": "https://lokmat.news18.com/commonfeeds/v1/lok/rss/maharashtra/nagpur.xml",
+  "Aurangabad": "https://lokmat.news18.com/commonfeeds/v1/lok/rss/maharashtra/aurangabad.xml",
+  "Auto and Tech": "https://lokmat.news18.com/commonfeeds/v1/lok/rss/auto-and-tech.xml",
+  "Agriculture": "https://lokmat.news18.com/commonfeeds/v1/lok/rss/money/agriculture.xml",
+  "Career": "https://lokmat.news18.com/commonfeeds/v1/lok/rss/career.xml"
+}

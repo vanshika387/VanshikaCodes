@@ -1,0 +1,20 @@
+{
+    "Latest News": "https://www.thehindu.com/news/national/feeder/default.rss",
+    "National": "https://www.thehindu.com/news/national/feeder/default.rss",
+    "International": "https://www.thehindu.com/news/international/feeder/default.rss",
+    "Business": "https://www.thehindu.com/business/feeder/default.rss",
+    "Sports": "https://www.thehindu.com/sport/feeder/default.rss",
+    "Technology": "https://www.thehindu.com/sci-tech/technology/feeder/default.rss",
+    "Science": "https://www.thehindu.com/sci-tech/science/feeder/default.rss",
+    "Health": "https://www.thehindu.com/sci-tech/health/feeder/default.rss",
+    "Opinion": "https://www.thehindu.com/opinion/feeder/default.rss",
+    "Editorial": "https://www.thehindu.com/opinion/editorial/feeder/default.rss",
+    "Mumbai": "https://www.thehindu.com/news/cities/mumbai/feeder/default.rss",
+    "Delhi": "https://www.thehindu.com/news/cities/Delhi/feeder/default.rss",
+    "Bangalore": "https://www.thehindu.com/news/cities/bangalore/feeder/default.rss",
+    "Chennai": "https://www.thehindu.com/news/cities/chennai/feeder/default.rss",
+    "Hyderabad": "https://www.thehindu.com/news/cities/Hyderabad/feeder/default.rss",
+    "Kolkata": "https://www.thehindu.com/news/cities/kolkata/feeder/default.rss",
+    "Thiruvananthapuram": "https://www.thehindu.com/news/cities/Thiruvananthapuram/feeder/default.rss",
+    "Vijayawada": "https://www.thehindu.com/news/cities/vijayawada/feeder/default.rss"
+}

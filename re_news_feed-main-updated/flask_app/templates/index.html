@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Feed Aggregator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>News Feed Aggregator</h1>
+        <p class="subtitle">Latest real estate and property news</p>
+    </header>
+
+    <div class="action-buttons">
+        <button id="view-useful-btn" class="action-btn">View Useful Articles Only</button>
+        <button id="download-csv-btn" class="action-btn">Download Useful Articles as CSV</button>
+        <button id="show-all-btn" class="action-btn" style="display:none;">Show All Articles</button>
+    </div>
+
+    <div class="table-container">
+        {% if articles %}
+        <table class="news-table">
+            <thead>
+                <tr>
+                    <th>Source</th>
+                    <th>Location</th>
+                    <th>Headline</th>
+                    <th>Date</th>
+                    <th>Link</th>
+                    <th>Useful?</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for article in articles %}
+                <tr>
+                    <td><span class="source-badge">{{ article.site_name }}</span></td>
+                    <td>{{ article.sub_site_name }}</td>
+                    <td>{{ article.title }}</td>
+                    <td class="article-date">{{ article.link_date }}</td>
+                    <td><a href="{{ article.links }}" class="article-link" target="_blank">Read →</a></td>
+                    <!-- <td>
+                        <input type="checkbox" class="useful-checkbox" id="check-{{ article.link_id }}">
+                        <label for="check-{{ article.link_id }}" class="checkbox-label">Mark useful</label>
+                    </td> -->
+                    <td>
+                        <input type="checkbox" class="useful-checkbox" id="check-{{ article.link_id }}" 
+                            data-link-id="{{ article.link_id }}" {% if article.useful %}checked{% endif %}>
+                        <label for="check-{{ article.link_id }}" class="checkbox-label">Mark useful</label>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <div class="empty-state">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <h3>No articles found</h3>
+            <p>Try refreshing or check back later for updates</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

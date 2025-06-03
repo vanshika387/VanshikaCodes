@@ -1,0 +1,18 @@
+{
+  "News": "https://www.livemint.com/rss/news",
+  "Companies": "https://www.livemint.com/rss/companies",
+  "Markets": "https://www.livemint.com/rss/markets",
+  "Money": "https://www.livemint.com/rss/money",
+  "Industry": "https://www.livemint.com/rss/industry",
+  "Technology": "https://www.livemint.com/rss/technology",
+  "Politics": "https://www.livemint.com/rss/politics",
+  "Budget": "https://www.livemint.com/rss/budget",
+  "Insurance": "https://www.livemint.com/rss/insurance",
+  "AI": "https://www.livemint.com/rss/AI",
+  "Opinion": "https://www.livemint.com/rss/opinion",
+  "Science": "https://www.livemint.com/rss/science",
+  "Education": "https://www.livemint.com/rss/education",
+  "Sports": "https://www.livemint.com/rss/sports",
+  "Elections": "https://www.livemint.com/rss/elections",
+  "Videos": "https://www.livemint.com/rss/videos"
+}

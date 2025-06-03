@@ -1,0 +1,14 @@
+{
+  "Top Stories": "https://www.hindustantimes.com/feeds/rss/top-news/rssfeed.xml",
+  "Delhi": "https://www.hindustantimes.com/feeds/rss/cities/delhi-news/rssfeed.xml",
+  "Mumbai": "https://www.hindustantimes.com/feeds/rss/cities/mumbai-news/rssfeed.xml",
+  "Bangalore": "https://www.hindustantimes.com/feeds/rss/cities/bengaluru-news/rssfeed.xml",
+  "Hyderabad": "https://www.hindustantimes.com/feeds/rss/cities/others/rssfeed.xml",
+  "Chennai": "https://www.hindustantimes.com/feeds/rss/cities/others/rssfeed.xml",
+  "Kolkata": "https://www.hindustantimes.com/feeds/rss/cities/kolkata-news/rssfeed.xml",
+  "Lucknow": "https://www.hindustantimes.com/feeds/rss/cities/lucknow-news/rssfeed.xml",
+  "India": "https://www.hindustantimes.com/feeds/rss/india-news/rssfeed.xml",
+  "Business": "https://www.hindustantimes.com/feeds/rss/business/rssfeed.xml",
+  "Tech": "https://www.hindustantimes.com/feeds/rss/technology/rssfeed.xml",
+  "Real Estate": "https://www.hindustantimes.com/feeds/rss/real-estate/rssfeed.xml"
+}
