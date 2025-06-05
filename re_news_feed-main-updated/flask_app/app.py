@@ -45,20 +45,39 @@ def get_mongo_connection(db_name='TimelyFeeds'):
 #         return render_template('error.html', error=str(e))
 
 
+# @app.route('/')
+# def index():
+#     try:
+#         db = get_mongo_connection()
+#         collection = db['fact_classified_articles']
+        
+#         # Query MongoDB - get only classified real estate articles, sorted by date
+#         articles = list(collection.find(
+#             # More flexible query:
+#             {"classification": {"$in": [True, "True"]}},  # Only show real estate articles
+#             {'_id': 0}  # Exclude MongoDB _id field
+#         ).sort('_id', -1).limit(1000))  # Limit to 100 most recent
+        
+#         # Format dates and ensure useful field exists
+#         for article in articles:
+#             if 'link_date' in article and isinstance(article['link_date'], datetime):
+#                 article['link_date'] = article['link_date'].strftime('%Y-%m-%d %H:%M:%S')
+#             if 'useful' not in article:
+#                 article['useful'] = False
+        
+#         return render_template('index.html', articles=articles)
 @app.route('/')
 def index():
     try:
         db = get_mongo_connection()
         collection = db['fact_classified_articles']
         
-        # Query MongoDB - get only classified real estate articles, sorted by date
         articles = list(collection.find(
-            # More flexible query:
-            {"classification": {"$in": [True, "True"]}},  # Only show real estate articles
-            {'_id': 0}  # Exclude MongoDB _id field
-        ).sort('_id', -1).limit(1000))  # Limit to 100 most recent
+            {"classification": {"$in": [True, "True"]}},
+            {'_id': 0}  # This will include all fields except _id
+        ).sort('_id', -1).limit(1000))
         
-        # Format dates and ensure useful field exists
+        # This part is already correct
         for article in articles:
             if 'link_date' in article and isinstance(article['link_date'], datetime):
                 article['link_date'] = article['link_date'].strftime('%Y-%m-%d %H:%M:%S')
@@ -66,6 +85,7 @@ def index():
                 article['useful'] = False
         
         return render_template('index.html', articles=articles)
+    # ... rest of the code
     
     except Exception as e:
         print(f"Error fetching articles: {e}")

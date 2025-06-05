@@ -220,6 +220,26 @@ class AmarUjalaReader(BaseFeedReader):
         except (IndexError, AttributeError):
             return None
         
+class NDTVReader(BaseFeedReader):
+    """Reader for NDTV RSS feeds"""
+    
+    SITE_NAME = "NDTV"
+    JSON_LOC = 'prompts/ndtv_rss_links.json'
+    
+    def _extract_link_id(self, link: str) -> Optional[str]:
+        """
+        Extracts ID from NDTV URLs like:
+        https://www.ndtv.com/...-8409222
+        https://www.ndtv.com/...-8586492
+        
+        Returns the numeric ID at the end of the URL
+        """
+        try:
+            # Split URL by hyphens and take the last part
+            return link.split('-')[-1]
+        except (IndexError, AttributeError):
+            return None
+        
 # Example usage:
 def main():
     # Initialize readers for different sources
@@ -230,7 +250,8 @@ def main():
         'TOI': TimesOfIndiaReader('Mumbai'),
         'The Hindu': TheHinduReader('National'),
         'Lokmat': LokmatReader('Real estate'),
-        'Amar Ujala': AmarUjalaReader('Delhi')
+        'Amar Ujala': AmarUjalaReader('Delhi'),
+        'NDTV': NDTVReader('India')
     }
     
     # Get and display feeds
@@ -251,5 +272,6 @@ if __name__ == "__main__":
     TheHinduReader.load_links()
     LokmatReader.load_links()
     AmarUjalaReader.load_links()
+    NDTVReader.load_links()
     
     main()
