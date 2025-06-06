@@ -1,0 +1,248 @@
+/* styles.css - Modern, Beautiful News Feed Design */
+
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3f37c9;
+  --accent-color: #4895ef;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --success-color: #4cc9f0;
+  --warning-color: #f72585;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #080809;
+  color: var(--dark-color);
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Table Styles */
+.table-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.news-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.news-table thead {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+}
+
+.news-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.news-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #dc2c84;
+  vertical-align: top;
+}
+
+.news-table tr:last-child td {
+  border-bottom: none;
+}
+
+.news-table tr:hover {
+  background-color: rgba(67, 97, 238, 0.05);
+  transition: var(--transition);
+}
+
+/* Link Styles */
+.article-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+  display: inline-block;
+  padding: 0.3rem 0;
+}
+
+.article-link:hover {
+  color: var(--secondary-color);
+  transform: translateX(3px);
+}
+
+/* Date Styles */
+.article-date {
+  color: #6c757d;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* Source Styles */
+.source-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-color);
+  text-align: center;
+  color: white;
+  border-radius: 25px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+/* Checkbox Styles */
+.useful-checkbox {
+  position: relative;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+.useful-checkbox:checked {
+  accent-color: var(--success-color);
+}
+
+.checkbox-label {
+  margin-left: 0.5rem;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .table-container {
+    border-radius: 0;
+  }
+  
+  .news-table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .news-table th, 
+  .news-table td {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  header {
+    padding: 1rem 0.5rem;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.news-table tr {
+  animation: fadeIn 0.3s ease forwards;
+  opacity: 0;
+}
+
+.news-table tr:nth-child(1) { animation-delay: 0.1s; }
+.news-table tr:nth-child(2) { animation-delay: 0.2s; }
+.news-table tr:nth-child(3) { animation-delay: 0.3s; }
+/* ... continue as needed ... */
+
+/* Loading State */
+.loading {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(67, 97, 238, 0.1);
+  border-radius: 50%;
+  border-top-color: var(--primary-color);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #6c757d;
+}
+
+.empty-state svg {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+/* Action buttons */
+.action-buttons {
+    text-align: center;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.action-btn {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
+}
+
+.action-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}

@@ -1,0 +1,19 @@
+{
+  "Latest News": "https://economictimes.indiatimes.com/rssfeedsdefault.cms",
+  "Top Stories": "https://economictimes.indiatimes.com/rssfeedstopstories.cms",
+  "Markets": "https://economictimes.indiatimes.com/prime/money-and-markets/rssfeeds/62511286.cms",
+  "Economy": "https://economictimes.indiatimes.com/prime/economy-and-policy/rssfeeds/63884214.cms",
+  "India": "https://economictimes.indiatimes.com/news/india/rssfeeds/81582957.cms",
+  "Real Estate": "https://economictimes.indiatimes.com/wealth/real-estate/rssfeeds/48997582.cms",
+  "Banking/Finance": "https://economictimes.indiatimes.com/industry/banking/finance/rssfeeds/13358259.cms",
+  "Infrastructure": "https://economictimes.indiatimes.com/prime/infrastructure/rssfeeds/64403500.cms",
+  "Mumbai News": "https://economictimes.indiatimes.com/news/mumbai-news/rssfeeds/93924369.cms",
+  "Bengaluru News": "https://economictimes.indiatimes.com/news/bengaluru-news/rssfeeds/93924337.cms",
+  "Pune News": "https://economictimes.indiatimes.com/news/pune-news/rssfeeds/93924360.cms",
+  "Wealth": "https://economictimes.indiatimes.com/wealth/rssfeeds/837555174.cms",
+  "Investment Ideas": "https://economictimes.indiatimes.com/markets/investment-ideas/rssfeeds/81409979.cms",
+  "Auto": "https://economictimes.indiatimes.com/industry/auto/rssfeeds/13359412.cms",
+  "Startups": "https://economictimes.indiatimes.com/tech/startups/rssfeeds/78570540.cms",
+  "Policy & Trends": "https://economictimes.indiatimes.com/small-biz/policy-trends/rssfeeds/11993039.cms",
+  "Environment": "https://economictimes.indiatimes.com/prime/environment/rssfeeds/63319186.cms"
+}
